@@ -1,6 +1,6 @@
 # BigQuery Casvas Prompt for Data Analysis
 
-ALL TABLES:
+## ALL TABLES:
 1. distribution_centers: Information about various distribution centers
 2. events: Records of events, possibly related to website visits, customer interactions
 3. inventory_items: Details about items in the inventory, possibly including quantities and locations.
@@ -31,6 +31,8 @@ ALL TABLES:
 ## User
 - summarize total user by traffice_source, gender and city
 
-# Order Items + Product 
+## Order Items + Product 
  - Analyze which product category have order sale volume and frequency
 
+### References:
+- Medium: 

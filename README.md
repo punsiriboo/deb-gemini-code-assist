@@ -1,7 +1,7 @@
 # [Skooldio DEB] Gemini Code Assist for Data Engineering
 
 <p align="center" width="100%">
-    <img src="./assets/course_title.jpg"> 
+    <img src="./assets/images/course_title.jpg"> 
 </p>
 
 ## 🎉 แนะนำตัว

@@ -13,9 +13,8 @@ https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether&vs_cur
 bucket_name=`deb-gemini-code-assist-YOUR_NAME` 
 folder=`raw/coingecko`
 And then upload data from GSC to BigQuery
-destination_project_dataset_table=`de_code_assist_workshop.coingecko_price`
+destination_project_dataset_table=`gemini_assist_workshop.coingecko_price`
 ```
-
 
 
 ## DAG_2 - ingest data from Json File to BigQuery
@@ -24,12 +23,28 @@ destination_project_dataset_table=`de_code_assist_workshop.coingecko_price`
 Create Airflow DAG that contain 3 tasks:
 projec_id=`YOUR_PROJECT_ID`
 bucket_name=`deb-gemini-code-assist-YOUR_NAME` 
-destination_project_dataset_table=`de_code_assist_workshop.ecommerce_products`
+destination_project_dataset_table=`gemini_assist_workshop.customer_feedback`
 
-1. Load data from path `csv_files/products.json` and convert to csv and upload to GCS 
-folder=`raw/ecommerce_products`
+1. Extract: Load data from path `customer_feedback.json` and convert to csv and upload to GCS 
+folder=`raw/customer_feedback`
 
-2. Get data from raw and transform by adding new column
+2. Transform: 
+Get data from raw and then clean and transform the customer_feedback data using pandas.
+folder=`processed/customer_feedback\`
+Add the following columns:
+count_character, age_segmenent 
 
-folder=`processed/ecommerce_products\`
+3. Upload data to BigQuery 
+```
+
+
+## DAG_2 
+1. Chat with you code
+```
+Add Schedule daily and owner to `gemini-code-assist`
+```
+
+2. Code Completeion for Airflow DAG
+```
+Add task to send LINE notication if the all the upstream task is Done.
 ```

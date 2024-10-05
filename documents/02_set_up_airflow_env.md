@@ -6,11 +6,15 @@
 
 
 ```sh
-mkdir -p ./dags ./config ./logs ./plugins ./tests ./pyspark ./spark-events
+mkdir -p ./dags ./config ./logs ./plugins ./tests
 ```
 ​
 สำหรับเครื่องที่เป็น Linux เราจำเป็นที่จะต้องกำหนด Airflow user ก่อนด้วย เพื่อให้ Airflow user ที่อยู่ใน Docker container สามารถเขียนไฟล์ลงมาบนเครื่อง host ได้ เราจะใช้คำสั่ง
 
 ```sh
 echo -e "AIRFLOW_UID=$(id -u)" > .env
+```
+
+```sh
+docker-compose up
 ```

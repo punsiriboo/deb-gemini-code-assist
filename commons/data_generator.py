@@ -21,7 +21,7 @@ def generate_feedback(num_feedbacks):
             "timestamp": fake.date_time_this_year().isoformat(),  # เวลาในปีนี้
             "branch": random.choice(branches),  # สุ่มเลือกสาขาจากรายชื่อ
             "channel": random.choice(channels),  # สุ่มเลือกช่องทางจากรายชื่อ
-            "age": random.randint(18, 65)  # สุ่มอายุระหว่าง 18 ถึง 65 ปี
+            "birthdate": fake.date_of_birth(minimum_age=18, maximum_age=65).isoformat()  # สุ่มวันเกิดระหว่าง 18 ถึง 65 ปี
         }
         feedback_list.append(feedback)
 

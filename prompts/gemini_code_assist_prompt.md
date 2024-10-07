@@ -10,13 +10,13 @@ Create Airflow DAG that contain 2 tasks:
 Objective is to collect data and upload Create/Append to BigQuery Table 
 projec_id=`YOUR_PROJECT_ID`
 
-1. Collect Data from API using PythonOperator:
-https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether&vs_currencies=usd,thb&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true
-
-2. Save results in GSC 
+1. Collect Data from API using PythonOperator
+and Save results in GSC 
 bucket_name=`deb-gemini-code-assist-YOUR_NAME` 
 folder=`raw/coingecko`
-And then upload data from GSC to BigQuery
+https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether&vs_currencies=usd,thb&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true
+
+2. Upload data from GSC to BigQuery
 destination_project_dataset_table=`gemini_assist_workshop.coingecko_price`
 ```
 ### 2. Chat with you code after prompt is done
@@ -35,7 +35,7 @@ bucket_name=`deb-gemini-code-assist-YOUR_NAME`
 destination_project_dataset_table=`gemini_assist_workshop.customer_feedback`
 
 1. Extract: Load data from path `customer_feedback.json` and convert to csv and upload to GCS 
-folder=`raw/customer_feedback`
+folder=`raw/customer_feedback` using pythonOperator
 
 2. Transform: 
 Get data from raw and then clean and transform the customer_feedback data using pandas.

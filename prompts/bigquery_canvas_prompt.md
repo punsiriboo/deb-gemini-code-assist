@@ -9,6 +9,15 @@
 6. products: Information about products, such as names, descriptions, and prices.
 7. users: Details about users, including customer information.
 
+## Orders
+Prompts:
+| Query Prompt | Visualization Prompts |
+| - | - |
+|Find cancel rate based on gender| -|
+| For all order, find ratio of each order status | Stacked bar chart by month |
+| For each month, find total_revenue, total_items, total_purchasers, total_orders where the order not Cancelled or Returned| Line chart by month |
+|For Shipped Orders, find average, min, max, lead time in day before Shipped| - |
+
 ## Distribution Centers
 - Summary product category in each DC
 
@@ -16,23 +25,23 @@
 - count total users group by trafic source , country 
 - สรุปจำนวน event จาก trafic source , ทุก event_type, browsrer
 
-## Inventory Items
-- 
-
-## Order Items
-
-## Orders
-- For all order, find ratio of each order statis
-- For Shipped order , find average, min, max,  lead time in day before Shipped in each month
-
 ## Products
-- Top 10 Average , min ,max profit from each category
+| Query Prompt | Visualization Prompts |
+| - | - |
+|Top 10 Average, min, max profit from each category |Bar chrat|
 
 ## User
-- summarize total user by traffice_source, gender and city
+| Query Prompt | Visualization Prompts |
+| - | - |
+| Summarize total user by traffice_source, gender and city |-|
 
 ## Order Items + Product 
- - Analyze which product category have order sale volume and frequency
+| Query Prompt | Visualization Prompts |
+| - | - |
+| Analyze which product category have order sale volume and frequency | - |
+| product category sales| - |
+| Product category cancellation and return | - |
+
 
 ### References:
-- Medium: 
+- Medium: https://medium.com/@chisomnnamani/the-look-e-commerce-data-analysis-28342b8da868
